@@ -1,0 +1,226 @@
+/*broad styles*/
+*,
+*:after,
+*:before {
+  /*box-sizing: border-box;*/
+  font-family: "ABeeZee", serif;
+}
+
+/*header styles*/
+body {
+  margin: 0px;
+}
+
+header {
+  background-color: black;
+  padding: 10px 30px 40px 30px;
+  color: lightgrey;
+}
+
+.header-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user {
+  margin: 10px 10px 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-text {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: flex-end;
+}
+
+.company {
+  border: solid 1px white;
+  flex: 1;
+}
+
+.fas {
+  color: #76A5A5;
+}
+
+.fa-share-alt {
+  color: #EDAE49;
+}
+
+#nav-bars{
+  display: none;
+}
+
+/*.icon {
+  height: 25px;
+  width: 25px;
+}*/
+
+.selected {
+  color: #EDAE49;
+}
+
+.nav-text {
+  margin: 0 30px 0 10px;
+}
+
+.admin-text {
+  margin: 0 10px 0 10px;
+}
+
+.user-options {
+  width: 20px;
+  height: 20px;
+}
+
+/*main content styles*/
+body {
+  background-color: #F7F7F2;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  margin: 20px 10px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+h6 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.blue-text {
+  color: #297373;
+}
+
+.profile {
+  background-color: white;
+  border: solid 1px lightgrey;
+  box-shadow: 5px 5px 5px lightgrey;
+  height: 470px;
+  margin: 5px;
+  width: 300px;
+  display: relative;
+}
+
+.prof-header {
+  position: relative;
+}
+
+.user-image {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  filter: brightness(80%);
+}
+
+.return {
+  width: 50px;
+  position: relative;
+  left: 15px;
+  bottom: 190px;
+}
+
+.views {
+  color: white;
+  position: relative;
+  text-align: center;
+  bottom: 245px;
+  left: 105px;
+}
+
+.user-text {
+  padding: 15px;
+  position: relative;
+  bottom: 130px;
+}
+
+.links {
+  margin: 15px 0;
+  background-color: lightgrey;
+  padding: 5px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+/*Media queries for smaller screens*/
+@media(max-width: 450px) {
+  header {
+    padding: 20px;
+  }
+
+  .header-flex {
+    
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .company {
+    flex: 4;
+  }
+
+  .nav-bar,
+  .user {
+    display: none;
+  }
+
+  nav {
+    flex: 1;
+  }
+
+  #nav-bars {
+    display: contents;
+  }
+}
+
+
+
+
+
+
