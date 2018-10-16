@@ -2,7 +2,6 @@
 *,
 *:after,
 *:before {
-  /*box-sizing: border-box;*/
   font-family: "ABeeZee", serif;
 }
 
@@ -13,8 +12,24 @@ body {
 
 header {
   background-color: #1A1423;
-  padding: 10px 30px 40px 30px;
   color: lightgrey;
+  padding: 10px 30px 40px 30px;
+}
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 10px 20px 0;
+}
+
+/*icon not centering with text, fix?*/
+.admin-text {
+  margin: 0 10px 0 10px;
+}
+
+.user-options {
+  height: 20px;
+  width: 20px;
 }
 
 .header-flex {
@@ -23,32 +38,26 @@ header {
 }
 
 nav {
-  flex: 2;
   display: flex;
   flex-wrap: wrap;
-}
-
-.user {
-  margin: 10px 10px 20px 0;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.admin-text {
-  display: flex;
-  align-items: center;
+  flex: 2;
 }
 
 .nav-bar {
-  display: flex;
   align-items: flex-end;
+  display: flex;
+  margin: 5px;
 }
 
 .company {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+#nav-icon {
+  display: none;
 }
 
 .logo {
@@ -57,28 +66,16 @@ nav {
 }
 
 .company-name {
-  margin-left: 5px;
-  white-space: nowrap;
   color: white;
   font-size: 28px;
+  margin: 0 0 0 5px;
+  white-space: nowrap;
 }
 
-.fas {
-  color: #76A5A5;
-}
-
-.fa-share-alt {
-  color: #EDAE49;
-}
-
-#nav-bars{
-  display: none;
-}
-
-/*.icon {
+.icon {
   height: 25px;
   width: 25px;
-}*/
+}
 
 .selected {
   color: #EDAE49;
@@ -87,15 +84,6 @@ nav {
 .nav-text {
   margin: 0 30px 0 10px;
   text-transform: uppercase;
-}
-
-.admin-text {
-  margin: 0 10px 0 10px;
-}
-
-.user-options {
-  width: 20px;
-  height: 20px;
 }
 
 /*main content styles*/
@@ -110,6 +98,7 @@ body {
   justify-content: center;
 }
 
+/*Possible to get title inline with left box?*/
 .title {
   margin: 20px 10px;
 }
@@ -127,19 +116,19 @@ h2 {
 }
 
 h3 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 h4 {
-  margin-top: 10px;
   font-size: 18px;
+  margin-top: 10px;
 }
 
 h6 {
-  margin-bottom: 15px;
   font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .blue-text {
@@ -150,10 +139,10 @@ h6 {
   background-color: white;
   border: solid 1px lightgrey;
   box-shadow: 5px 5px 5px lightgrey;
+  display: relative;
   height: 470px;
   margin: 5px;
   width: 300px;
-  display: relative;
 }
 
 .prof-header {
@@ -161,47 +150,50 @@ h6 {
 }
 
 .user-image {
-  object-fit: cover;
-  width: 300px;
-  height: 200px;
-  position: relative;
   filter: brightness(80%);
+  height: 200px;
+  object-fit: cover;
+  position: relative;
+  width: 300px;
 }
 
 .return {
-  width: 50px;
-  position: relative;
-  left: 15px;
   bottom: 190px;
+  left: 15px;
+  position: relative;
+  width: 50px;
 }
 
 .views {
-  width: 50px;
+  bottom: 245px;
   color: white;
+  left: 235px;
   position: relative;
   text-align: center;
-  bottom: 245px;
-  left: 235px;
+  width: 50px;
 }
 
 .user-text {
+  bottom: 130px;
   padding: 15px;
   position: relative;
-  bottom: 130px;
 }
 
 .links {
-  margin: 15px 0;
   background-color: lightgrey;
-  padding: 5px;
-  overflow-wrap: break-word;
   hyphens: auto;
+  margin: 15px 0;
+  overflow-wrap: break-word;
+  padding: 5px;
 }
 
 a {
   color: black;
   text-decoration-line: none;
 }
+
+/*Media queries for larger screens*/
+@media(min-width: 1560px) {}
 
 /*Media queries for smaller screens*/
 @media(max-width: 559px) {
@@ -213,31 +205,25 @@ a {
     text-align: center;
   }
 
-  .company {
-    flex: 1;
-  }
-
   .logo {
-    width: 50px;
     height: 50px;
+    width: 50px;
   }
 
   .company-name {
-    font-size: 20px;
+    font-size: 24px;
     white-space: normal;
   }
 
-  .nav-bar,
+  nav,
   .user {
     display: none;
   }
 
-  nav {
-    flex: 1;
-  }
-
-  #nav-bars {
-    display: contents;
+  #nav-icon {
+    display: inline;
+    height: 30px;
+    width: 30px;
   }
 }
 
