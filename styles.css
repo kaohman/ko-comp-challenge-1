@@ -2,6 +2,7 @@
 *,
 *:after,
 *:before {
+  box-sizing: border-box;
   font-family: "ABeeZee", serif;
 }
 
@@ -18,13 +19,13 @@ header {
 
 .user {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   margin: 10px 10px 20px 0;
 }
 
-/*icon not centering with text, fix?*/
 .admin-text {
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
 }
 
 .user-options {
@@ -100,7 +101,7 @@ body {
 
 /*Possible to get title inline with left box?*/
 .title {
-  margin: 20px 10px;
+  margin: 20px 30px;
 }
 
 h2,
@@ -140,7 +141,7 @@ h6 {
   border: solid 1px lightgrey;
   box-shadow: 5px 5px 5px lightgrey;
   display: relative;
-  height: 470px;
+  height: 455px;
   margin: 5px;
   width: 300px;
 }
@@ -193,10 +194,16 @@ a {
 }
 
 /*Media queries for larger screens*/
-@media(min-width: 1560px) {}
+@media screen and (min-width: 1560px) {
+  /*change max width of container?*/
+  .main-content {
+    width: 1500px;
+    margin: 0 auto;
+  }
+}
 
 /*Media queries for smaller screens*/
-@media(max-width: 559px) {
+@media screen and (max-width: 559px) {
   header {
     padding: 20px;
   }
@@ -221,9 +228,10 @@ a {
   }
 
   #nav-icon {
-    display: inline;
+    display: block;
     height: 30px;
     width: 30px;
+    margin: auto;
   }
 }
 
